@@ -1,4 +1,4 @@
-import Link from "next/Link";
+import Link from "next/link";
 import "./globals.css";
 import { ReactJsxRuntime } from "next/dist/server/route-modules/app-page/vendored/rsc/entrypoints";
 export const metadata = {
@@ -12,8 +12,11 @@ export default function RootLayout({ children }) {
       <body>
         <nav>
           <Link href="/"> Recipe <span>Finder</span></Link>
-
         </nav>
+        {children}
+        <footer>
+          <p>Developed by <span> Muhammad Waleed</span></p>
+        </footer>
       </body>
 
     </html>
