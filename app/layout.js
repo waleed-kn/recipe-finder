@@ -1,9 +1,10 @@
 import Link from "next/link";
+import ThemeToggle from "./components/ThemeToggle";
 import "./globals.css";
-import { ReactJsxRuntime } from "next/dist/server/route-modules/app-page/vendored/rsc/entrypoints";
+
 export const metadata = {
   title: "Recipe Finder",
-  description: "Find the delicious Recipe from around the world",
+  description: "Find delicious recipes from around the world",
 };
 
 export default function RootLayout({ children }) {
@@ -11,14 +12,14 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <nav>
-          <Link href="/"> Recipe <span>Finder</span></Link>
+          <Link href="/">🍳 Recipe<span>Finder</span></Link>
+          <ThemeToggle />
         </nav>
         {children}
         <footer>
-          <p>Developed by <span> Muhammad Waleed</span></p>
+          <p>Developed by <span>Muhammad Waleed</span></p>
         </footer>
       </body>
-
     </html>
-  )
+  );
 }
